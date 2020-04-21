@@ -1,0 +1,44 @@
+﻿<Window x:Class="p4_lab_8_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p4_lab_8_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightGray" Margin="0,0,-144,-46">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="172*"/>
+            <RowDefinition Height="232*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="canvas" Background="White" Grid.RowSpan="3" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="528" Margin="60,30,0,0">
+            <Rectangle x:Name="RA" Height="100" Canvas.Left="25" Stroke="black" Canvas.Bottom="0" Width="100" Fill="red"/>
+            <Rectangle x:Name="RB" Height="100" Canvas.Left="150" Stroke="black" Canvas.Bottom="0" Width="100" Fill="Green"/>
+            <Rectangle x:Name="RC" Height="100" Canvas.Left="275" Stroke="black" Canvas.Bottom="0" Width="100" Fill="Blue"/>
+            <Rectangle x:Name="RD" Height="100" Canvas.Left="400" Stroke="black" Canvas.Bottom="0" Width="100" Fill="Yellow"/>
+        </Canvas>
+        <TextBlock x:Name="QuestionTextblock" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="16" Width="150"/>
+        <WrapPanel Grid.Column="1" HorizontalAlignment="Left" Height="141" Grid.Row="1" VerticalAlignment="Top" Width="264">
+            <Button Content="A" Width="100" Height="30px" Margin="10" Click="Button_Click"/>
+            <Button Content="B" Width="100" Height="30px" Margin="10" Click="Button_Click"/>
+            <Button Content="C" Width="100" Height="30px" Margin="10" Click="Button_Click"/>
+            <Button Content="D" Width="100" Height="30px" Margin="10" Click="Button_Click"/>
+        </WrapPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Left" Height="212" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Suma Głosów"/>
+                <TextBlock x:Name="AllAnswers" Background="White" TextWrapping="Wrap" Text="00"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Statystyka 2"/>
+                <TextBlock x:Name="Stat2" Background="White" TextWrapping="Wrap" Text="00"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
